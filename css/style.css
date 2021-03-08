@@ -1,23 +1,88 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a{
     text-decoration: none;
-}
-
-
-body{
-    background-color: darkslategray;
+    color: white;
 }
 
 
 ul{
-    
+    list-style: none;
+}
+
+.gridwrapper-index {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-areas: 
+    "he nv nv"
+    "at at at"
+    "se se a1"
+    "a2 se se"
+    "fo fo fo"
+    ;
+}
+
+.gridwrapper-merch {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 2fr;
+    grid-template-areas: 
+    "he nv nv"
+    "at at at"
+    "at at at"
+    "fo fo fo"
+    ;
+}
+
+header {
+    background: lightblue;
+    grid-area: he;
+}
+
+nav {
+    background: forestgreen;
+    grid-area: nv;
+}
+
+section {
+    background: salmon;
+    grid-area: se;
+}
+
+#a1 {
+    background: goldenrod;
+    grid-area: a1;
+}
+
+#a2 {
+    background: goldenrod;
+    grid-area: a2;
 }
 
 
+article{ 
+    background: deepskyblue;
+    grid-area: at;
+}
+
+footer {
+    background: deeppink;
+    grid-area: fo;
+
+}
+
+@media screen and (min-width: 600px) {
 
 
-@media 
+/* Fyll i mobildesign här */
+
+}
