@@ -7,7 +7,6 @@
 
 a {
     text-decoration: none;
-    color: white;
 }
 
 
@@ -15,16 +14,20 @@ ul {
     list-style: none;
 }
 
+li {
+    list-style: none;
+}
+
 .gridwrapper-index {
     display: grid;
-    height: 100vh;
+    height: 1560px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 100px 3fr 3fr 1fr;
+    grid-template-rows: 10vh 3fr 850px 1fr;
     grid-template-areas: 
     "he nv nv"
-    "se se a2"
     "se se a1"
+    "se se a2"
     "fo fo fo"
     ;
 }
@@ -51,9 +54,8 @@ ul {
     grid-template-rows: 1fr 3fr 3fr 2fr;
     grid-template-areas: 
     "he nv nv"
-    ""
     "se se se"
-    "se se at"
+    "se se se"
     "fo fo fo"
     ;
 }
@@ -94,21 +96,111 @@ article{
 }
 
 footer {
-    background: deeppink;
+    background: #084a91;
     grid-area: fo;
+    padding: 50px;
     display: flex;
-    
+    flex-flow: row wrap;
 }
+
+footer > *{
+    flex: 1 100%;
+}
+
+.footer-left {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+
+.footer-left > *{
+    color: #999;
+}
+
+.footer-left p{
+    padding: 20%;
+}
+
+.footer-left .fa{
+    width: 84px;
+    height: 84px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    padding: 8px;
+}
+
+.footer-right {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-right > *{
+    flex: 1 50%;
+    margin-right: 1.4em;
+}
+
+.box a {
+    color: #999;
+}
+
+footer li{
+    line-height: 2em;
+}
+
+.socials a{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+
+
+.footer-links a{
+    color: #101001;
+}
+
+.footer-right li h2{
+    font-weight: 500;
+    padding-left: 0;
+}
+
+.footer-bottom{
+    text-align: center;
+    color: black;
+    padding-bottom: 30px;
+}
+
+footer ul{
+    padding-left: 0;
+}
+
+
 
 @media screen and (max-width: 768px) {
 
 
 /* Fyll i mobilspecifik design här */
 
+    .footer-right{
+        flex: 1 0;
+    }
+
+    .footer-left{
+        flex: 1 0px;
+    }
+
+    .footer-right > *{
+        flex: 2 0px;
+    }
+
+
 }
 
 
 
+
+
+/* För burger */
 
 .nav-active {
     transform: translateY(100vh);
@@ -127,10 +219,6 @@ footer {
     transition: all 0.5s;
 }
 
-li {
-    list-style: none;
-}
-
 .nav-links a {
     color: rgb(78, 57, 37);
     text-decoration: none;
@@ -143,7 +231,7 @@ li {
     margin-right: 50px;
 }
 
-.burger:hover {
+.burger:hover{
     cursor: pointer;
 }
 
