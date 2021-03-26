@@ -18,6 +18,10 @@ li {
     list-style: none;
 }
 
+.supporter-info ul{
+    list-style: circle;
+}
+
 .gridwrapper-index {
     display: grid;
     height: 1560px;
@@ -28,6 +32,34 @@ li {
     "he nv nv"
     "se se a1"
     "se se a2"
+    "fo fo fo"
+    ;
+}
+
+.gridwrapper-apply {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 10vh 3fr 3fr 1fr;
+    grid-template-areas: 
+    "he nv nv"
+    "mn mn mn"
+    "mn mn mn"
+    "fo fo fo"
+    ;
+}
+
+.gridwrapper-supporter {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 10vh 3fr 3fr 1fr;
+    grid-template-areas: 
+    "he nv nv"
+    "mn mn at"
+    "mn mn at"
     "fo fo fo"
     ;
 }
