@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,18 @@
     box-sizing: border-box;
 }
 
+body{
+    background: rgba(255, 87, 179, 0.596);
+    z-index: 2;
+}
+
+
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: snow;
 }
 
 
@@ -18,9 +29,15 @@ li {
     list-style: none;
 }
 
-.supporter-info ul{
+.supporter-info{
+    padding: 90px 50px;
+    display: inline-block;
     list-style: circle;
 }
+
+.supporter-info .bordered-content{
+    padding: 10px;
+} 
 
 .gridwrapper-index {
     display: grid;
@@ -93,7 +110,7 @@ li {
 }
 
 header {
-    background: lightblue;
+    background: dodgerblue;
     grid-area: he;
 }
 
@@ -107,7 +124,6 @@ nav {
 }
 
 section {
-    background: salmon;
     grid-area: se;
 }
 
@@ -177,7 +193,13 @@ footer li{
 }
 
 
+.bordered-content{
+    border-style: solid;
+}
 
+.pic{
+    padding: 75px;
+}
 
 
 .footer-links a{
@@ -234,7 +256,6 @@ footer ul{
 
 
 }
-
 
 
 
