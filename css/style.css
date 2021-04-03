@@ -7,7 +7,7 @@
 }
 
 body{
-    background: rgba(255, 87, 179, 0.596);
+    background: rgba(85, 57, 33, 0.445);
     z-index: 2;
 }
 
@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-    color: snow;
+    color: rgb(233, 166, 89);
 }
 
 
@@ -30,14 +30,17 @@ li {
 }
 
 .supporter-info{
-    padding: 90px 50px;
-    display: inline-block;
+    padding-top: 50px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 80px;
     list-style: circle;
 }
 
-.supporter-info .bordered-content{
-    padding: 10px;
-} 
+main img{
+    width: 500px;
+    height: 400px;
+}
 
 .gridwrapper-index {
     display: grid;
@@ -47,8 +50,8 @@ li {
     grid-template-rows: 10vh 3fr 3fr 1fr;
     grid-template-areas: 
     "he nv nv"
-    "se se a1"
-    "se se a2"
+    "se se as"
+    "se se as"
     "fo fo fo"
     ;
 }
@@ -58,10 +61,9 @@ li {
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 3fr 3fr 1fr;
+    grid-template-rows: 10vh 3fr 0.5fr;
     grid-template-areas: 
     "he nv nv"
-    "mn mn mn"
     "mn mn mn"
     "fo fo fo"
     ;
@@ -71,25 +73,24 @@ li {
     display: grid;
     height: 100vh;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1.5fr 15vw;
     grid-template-rows: 10vh 3fr 3fr 1fr;
     grid-template-areas: 
     "he nv nv"
-    "mn mn at"
-    "mn mn at"
+    "mn mn as"
+    "mn mn as"
     "fo fo fo"
     ;
 }
 
 .gridwrapper-merch {
     display: grid;
-    height: 100vh;
+    height: 1790px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr 2fr;
+    grid-template-rows: 10vh 2fr 0.5fr;
     grid-template-areas: 
     "he nv nv"
-    "at at at"
     "at at at"
     "fo fo fo"
     ;
@@ -97,25 +98,32 @@ li {
 
 .gridwrapper-history {
     display: grid;
-    height: 100vh;
+    height: 1500px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr 2fr;
+    grid-template-rows: 10vh 3fr 3fr 2fr;
     grid-template-areas: 
     "he nv nv"
-    "se se se"
     "se se se"
     "fo fo fo"
     ;
 }
 
 header {
-    background: dodgerblue;
+    background: #084a91;
     grid-area: he;
 }
 
+header img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+}
+
 nav {
-    background-color: dodgerblue;
+    background: #084a91;
     grid-area: nv;
     display: flex;
     justify-content: flex-end;
@@ -127,19 +135,15 @@ section {
     grid-area: se;
 }
 
-.a1 {
+aside {
     background: goldenrod;
-    grid-area: a1;
-}
+    grid-area: as;
 
-.a2 {
-    background: goldenrod;
-    grid-area: a2;
 }
 
 
 article{ 
-    background: deepskyblue;
+    background: rgba(0, 191, 255, 0.226);
     grid-area: at;
 }
 
@@ -177,6 +181,45 @@ footer > *{
     padding: 8px;
 }
 
+#section-split{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "cp cs"
+    ;
+}
+
+.content-primary-about{
+    grid-area: cp;
+}
+
+.content-secondary-about{
+    grid-area: cs;
+
+
+
+}
+
+
+
+.content-secondary{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    background: rgb(199, 235, 41);
+    right: 720px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    border-style: groove;
+    font-weight: bold;
+}
+
+.content-secondary img{
+    width: 220px;
+    height: 220px;
+}
 
 
 .box a {
@@ -201,6 +244,53 @@ footer li{
     padding: 75px;
 }
 
+.at-wrapper{
+    display: grid;
+    margin: 50px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "m1 m2 m3"
+    "m4 m5 m6"
+    ;
+    
+}
+
+.merch-product img{
+    width: 200px;
+    height: 200px;
+}
+
+.merch-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mp1{
+    grid-area: m1;
+}
+
+.mp2{
+    grid-area: m2;
+}
+
+.mp3{
+    grid-area: m3;
+}
+
+.mp4{
+    grid-area: m4;
+}
+
+.mp5{
+    grid-area: m5;
+}
+
+.mp6{
+    grid-area: m6;
+}
 
 .footer-links a{
     color: #101001;
@@ -254,7 +344,31 @@ footer ul{
         flex: 2 0px;
     }
 
-
+    .gridwrapper-merch {
+        display: grid;
+        height: 1780px;
+        width: 100vw;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 10vh 3fr 0.5fr;
+        grid-template-areas: 
+        "he nv"
+        "at at"
+        "fo fo"
+        ;
+    }
+    
+    .at-wrapper{
+        display: grid;
+        margin: 50px 100px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "m1 m2"
+        "m3 m4"
+        "m5 m6"
+        ;
+        
+    }
 }
 
 
@@ -276,16 +390,28 @@ footer ul{
     top: -90vh;
     justify-content: space-around;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 0.375s;
+    border-style: solid;
+    background-color: rgba(43, 43, 39, 0.89);
 }
 
+
+
 .nav-links a {
-    color: rgb(78, 57, 37);
+    color: rgba(189, 188, 178, 0.87);
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 0.4px;
     font-weight: bold;
+    padding: 0 10px;
+
 }
+
+.nav-links a:hover {
+    color: rgba(14, 155, 61, 0.849);
+    text-decoration: none;   
+}
+
 
 .burger{
     margin-right: 50px;
@@ -296,12 +422,12 @@ footer ul{
 }
 
 .burger div {
-    background-color: rgb(78, 57, 37);
+    background-color: rgba(172, 168, 165, 0.712);
     height: 3px;
     width: 25px;
     margin: 5px;
     border-radius: 10%;
-    transition: all 0.5s;
+    transition: all 0.75s;
 }
 
 .toggle .line-1 {
