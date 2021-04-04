@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body{
@@ -37,6 +38,12 @@ li {
     list-style: circle;
 }
 
+main{
+
+    grid-area: mn;
+
+}
+
 main img{
     width: 500px;
     height: 400px;
@@ -46,19 +53,18 @@ main img{
     display: grid;
     height: 1560px;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 3fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 3fr 0.5fr;
     grid-template-areas: 
     "he nv nv"
-    "se se as"
-    "se se as"
+    "mn mn mn"
     "fo fo fo"
     ;
 }
 
 .gridwrapper-apply {
     display: grid;
-    height: 100vh;
+    height: 1440px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 10vh 3fr 0.5fr;
@@ -71,14 +77,14 @@ main img{
 
 .gridwrapper-supporter {
     display: grid;
-    height: 100vh;
+    height: 1750px;
     width: 100%;
     grid-template-columns: 1fr 1.5fr 15vw;
     grid-template-rows: 10vh 3fr 3fr 1fr;
     grid-template-areas: 
     "he nv nv"
-    "mn mn as"
-    "mn mn as"
+    "mn se as"
+    "mn se as"
     "fo fo fo"
     ;
 }
@@ -96,12 +102,12 @@ main img{
     ;
 }
 
-.gridwrapper-history {
+.gridwrapper-about {
     display: grid;
-    height: 1500px;
+    height: 1300px;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 3fr 3fr 2fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 10vh 3fr 1fr;
     grid-template-areas: 
     "he nv nv"
     "se se se"
@@ -142,7 +148,7 @@ aside {
 }
 
 
-article{ 
+article { 
     background: rgba(0, 191, 255, 0.226);
     grid-area: at;
 }
@@ -168,6 +174,11 @@ footer > *{
     color: #999;
 }
 
+.footer-left img{
+    height: 200px; 
+    width: 200px;
+}
+
 .footer-left p{
     padding: 10%;
     padding-left: 0;
@@ -183,7 +194,7 @@ footer > *{
 
 #section-split{
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1.5fr 3fr;
     grid-template-rows: 1fr;
     grid-template-areas: 
     "cp cs"
@@ -191,28 +202,40 @@ footer > *{
 }
 
 .content-primary-about{
+    margin: 30px;
+    margin-right: 100px;
     grid-area: cp;
 }
 
-.content-secondary-about{
-    grid-area: cs;
-
-
-
+.content-primary-about > p{
+    margin-top: 12px;
 }
 
+.content-secondary-about{
+    margin: 30px;
+    grid-area: cs;
+}
 
+.content-secondary-about img {
+    margin: 30px 0;
+    width: 500px;
+    height: 281px;
+}
+
+.content-secondary-about > p{
+    margin-top: 12px;
+
+}
 
 .content-secondary{
     display: flex;
     flex-direction: column;
     margin-left: 15px;
-    background: rgb(199, 235, 41);
+    background: rgb(45, 99, 199);
     right: 720px;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    border-style: groove;
     font-weight: bold;
 }
 
@@ -233,15 +256,6 @@ footer li{
 .socials a{
     display: inline-block;
     margin-right: 10px;
-}
-
-
-.bordered-content{
-    border-style: solid;
-}
-
-.pic{
-    padding: 75px;
 }
 
 .at-wrapper{
@@ -383,11 +397,11 @@ footer ul{
 .nav-links {
     display: flex;
     flex-direction: column;
-    height: 90vh;
-    width: 20%;
-    position: absolute;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
     right: 0px;
-    top: -90vh;
+    top: -100vh;
     justify-content: space-around;
     align-items: center;
     transition: all 0.375s;
@@ -395,23 +409,19 @@ footer ul{
     background-color: rgba(43, 43, 39, 0.89);
 }
 
-
-
-.nav-links a {
+.nav-links > * > *{
     color: rgba(189, 188, 178, 0.87);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 48px;
     letter-spacing: 0.4px;
     font-weight: bold;
-    padding: 0 10px;
-
 }
 
 .nav-links a:hover {
+    background-color: rgb(13, 29, 34);
     color: rgba(14, 155, 61, 0.849);
     text-decoration: none;   
 }
-
 
 .burger{
     margin-right: 50px;
@@ -431,7 +441,7 @@ footer ul{
 }
 
 .toggle .line-1 {
-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line-2 {
@@ -439,5 +449,53 @@ transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line-3 {
-transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.div-splitter{
+    display: grid;
+    border-style: solid;
+    margin: 2.5em 50px;
+    width: 1241px;
+    height: 106px;
+    grid-template-columns: 212px 1fr 1fr 1fr;
+    grid-template-rows: 106px;
+    grid-template-areas: 
+    "lv g1 g2 g3"
+    ;
+}
+
+.livestatus{
+    display: flex;
+    font-size: 22px;
+    width: 212px;
+    height: 106px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-right-style: dashed;
+    
+    
+    grid-area: lv;
+}
+
+.games{
+    display: flex;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-right-style: dashed;
+}
+
+#g1{
+    grid-area: g1;
+}
+
+#g2{
+    grid-area: g2;
+}
+
+#g3{
+    grid-area: g3;
 }
