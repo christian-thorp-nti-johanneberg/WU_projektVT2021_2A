@@ -15,10 +15,7 @@ body{
 
 a {
     text-decoration: none;
-}
-
-a:hover {
-    color: rgb(233, 166, 89);
+    color: black;
 }
 
 
@@ -35,13 +32,14 @@ li {
     padding: 10px;
     margin: 10px;
     margin-left: 80px;
-    list-style: circle;
+}
+
+.supporter-info p{
+    font-size: 14px;
 }
 
 main{
-
     grid-area: mn;
-
 }
 
 main img{
@@ -77,7 +75,7 @@ main img{
 
 .gridwrapper-supporter {
     display: grid;
-    height: 1750px;
+    height: 1800px;
     width: 100%;
     grid-template-columns: 1fr 1.5fr 15vw;
     grid-template-rows: 10vh 3fr 3fr 1fr;
@@ -120,12 +118,13 @@ header {
     grid-area: he;
 }
 
-header img{
+header a img{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 75px;
     height: 75px;
+    top: 150px;
 }
 
 nav {
@@ -201,6 +200,11 @@ footer > *{
     ;
 }
 
+.content-primary img{
+    width: 400px;
+    height: 300px;
+}
+
 .content-primary-about{
     margin: 30px;
     margin-right: 100px;
@@ -211,20 +215,22 @@ footer > *{
     margin-top: 12px;
 }
 
+
+
 .content-secondary-about{
     margin: 30px;
     grid-area: cs;
 }
 
 .content-secondary-about img {
-    margin: 30px 0;
+    margin: 30px 1em;
+    padding-left: -1em;
     width: 500px;
     height: 281px;
 }
 
 .content-secondary-about > p{
     margin-top: 12px;
-
 }
 
 .content-secondary{
@@ -277,7 +283,7 @@ footer li{
 
 .merch-product{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 }
@@ -341,6 +347,10 @@ footer ul{
 
 
 
+
+
+
+
 @media screen and (max-width: 768px) {
 
 
@@ -358,10 +368,29 @@ footer ul{
         flex: 2 0px;
     }
 
+    .supporter-info{
+        margin-left: 20px;
+    }
+
+    .gridwrapper-supporter {
+        display: grid;
+        height: 1750px;
+        width: 100%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 10vh 3fr 3fr 1fr;
+        grid-template-areas: 
+        "he nv"
+        "mn mn"
+        "se se"
+        "as as"
+        "fo fo"
+        ;
+    }
+
     .gridwrapper-merch {
         display: grid;
         height: 1780px;
-        width: 100vw;
+        width: 100%;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: 10vh 3fr 0.5fr;
         grid-template-areas: 
@@ -370,10 +399,74 @@ footer ul{
         "fo fo"
         ;
     }
+
+    .gridwrapper-index {
+        display: grid;
+        height: 1780px;
+        width: 100%;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 10vh 3fr 0.5fr;
+        grid-template-areas: 
+        "he nv"
+        "mn mn"
+        "fo fo"
+        ;
+    }
+
+    .livestatus{
+        width: 128px;
+        height: 64px;
+    }
+
+    .gridwrapper-about {
+        display: grid;
+        height: 1300px;
+        width: 100%;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 10vh 3fr 1fr;
+        grid-template-areas: 
+        "he nv"
+        "se se"
+        "fo fo"
+        ;
+    }
+
+    .div-splitter{
+        display: grid;
+        border-style: solid;
+        margin: 0.5em 12px;
+        width: 106px;
+        height: 500px;
+        grid-template-columns: 106px;
+        grid-template-rows: 212px 1fr 1fr 1fr;
+        grid-template-areas: 
+        "lv"
+        "g1"
+        "g2"
+        "g3"
+        ;
+    }
+
+    .games{
+        display: block;
+    }
+
+    #section-split{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.5 3fr;
+        grid-template-areas: 
+        "cp"
+        "cs"
+        ;
+    }
+    
+    
+
     
     .at-wrapper{
         display: grid;
-        margin: 50px 100px;
+        margin: 12px 20px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
@@ -381,11 +474,38 @@ footer ul{
         "m3 m4"
         "m5 m6"
         ;
-        
     }
+
+    .nav-links {
+        text-align: center;
+    }
+        
+    .nav-links > * > *{
+        font-size: 48px;
+    }
+
+    .merch-product img{
+        width: 130px;
+        height: 130px;
+    }
+
+    .content-secondary{
+        margin-left: 0;
+        padding-top: 30px;
+    }
+
+    .content-secondary img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .content-secondary-about img{
+        width: 300px;
+        height: 175px;
+    }
+    
+
 }
-
-
 
 
 /* För burger */
@@ -481,6 +601,7 @@ footer ul{
 
 .games{
     display: flex;
+    flex-direction: column;
     font-size: 16px;
     text-align: center;
     align-items: center;
@@ -497,5 +618,21 @@ footer ul{
 }
 
 #g3{
+    border-right-style: none;
     grid-area: g3;
+}
+
+.content-hero{
+    padding-top: 25px;
+}
+
+.coach-comment{
+    padding: 12px 25px;
+    border-style: dotted;
+}
+
+.coach-comment:hover{
+    background-color:rgba(14, 155, 61, 0.849);
+    color:  rgb(13, 29, 34);
+    cursor: pointer;
 }
