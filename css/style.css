@@ -8,8 +8,9 @@
 }
 
 body{
-    background: rgba(85, 57, 33, 0.445);
+    background: rgba(28, 38, 82, 0.979);
     z-index: 2;
+    color: snow;
 }
 
 
@@ -42,7 +43,7 @@ main{
     grid-area: mn;
 }
 
-main img{
+main img {
     width: 500px;
     height: 400px;
 }
@@ -62,7 +63,7 @@ main img{
 
 .gridwrapper-apply {
     display: grid;
-    height: 1440px;
+    height: 1660px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 10vh 3fr 0.5fr;
@@ -77,7 +78,7 @@ main img{
     display: grid;
     height: 1800px;
     width: 100%;
-    grid-template-columns: 1fr 1.5fr 15vw;
+    grid-template-columns: 1fr 1.5fr 312px;
     grid-template-rows: 10vh 3fr 3fr 1fr;
     grid-template-areas: 
     "he nv nv"
@@ -432,10 +433,10 @@ footer ul{
     }
 
     .div-splitter{
-        display: grid;
+        display: flex;
+        flex-direction: column;
         border-style: solid;
-        margin: 0.5em 12px;
-        width: 106px;
+        width: 212px;
         height: 500px;
         grid-template-columns: 106px;
         grid-template-rows: 212px 1fr 1fr 1fr;
@@ -572,6 +573,8 @@ footer ul{
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* burger klar */
+
 .div-splitter{
     display: grid;
     border-style: solid;
@@ -583,6 +586,7 @@ footer ul{
     grid-template-areas: 
     "lv g1 g2 g3"
     ;
+    
 }
 
 .livestatus{
@@ -594,8 +598,6 @@ footer ul{
     align-items: center;
     justify-content: center;
     border-right-style: dashed;
-    
-    
     grid-area: lv;
 }
 
@@ -623,7 +625,19 @@ footer ul{
 }
 
 .content-hero{
-    padding-top: 25px;
+    display: grid;
+    padding: 25px 0;
+    margin: 0 25px;
+    width: 100%;
+    height: 800px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-areas: 
+    "lv gm"
+    "mn mn"
+    "st st"
+    ;
+
 }
 
 .coach-comment{
@@ -635,4 +649,14 @@ footer ul{
     background-color:rgba(14, 155, 61, 0.849);
     color:  rgb(13, 29, 34);
     cursor: pointer;
+}
+
+
+
+.bordered{
+    border-style: solid;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 50px 20px;
+    margin-top: 80px;
 }
