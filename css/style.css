@@ -48,6 +48,17 @@ main img {
     height: 400px;
 }
 
+.applybox {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 50px;
+    margin-top: -80px;
+}
+
+.applybox:hover {
+    background-color: rgb(13, 29, 34);
+    color: rgba(123, 255, 71, 0.849);
+}
+
 .gridwrapper-index {
     display: grid;
     height: 1560px;
@@ -70,6 +81,7 @@ main img {
     grid-template-areas: 
     "he nv nv"
     "mn mn mn"
+    "se se se"
     "fo fo fo"
     ;
 }
@@ -324,8 +336,12 @@ footer li{
 
 .footer-bottom{
     text-align: center;
-    color: black;
+    color: white;
     padding-bottom: 0;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 footer ul{
@@ -377,7 +393,7 @@ footer ul{
         display: grid;
         height: 1750px;
         width: 100%;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 2fr 2fr;
         grid-template-rows: 10vh 3fr 3fr 1fr;
         grid-template-areas: 
         "he nv"
@@ -413,6 +429,28 @@ footer ul{
         "fo fo"
         ;
     }
+
+    .gridwrapper-apply {
+        display: grid;
+        height: 1660px;
+        width: 100%;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 10vh 900px 250px 2fr;
+        grid-template-areas: 
+        "he nv"
+        "mn mn"
+        "se se"
+        "fo fo"
+        ;
+    }
+
+    .gridwrapper-apply main > img {
+
+        width: 192px;
+        height: 192px;
+
+    }
+    
 
     .livestatus{
         width: 128px;
@@ -655,8 +693,10 @@ footer ul{
 
 .bordered{
     border-style: solid;
+    border-radius: 40px;
     font-size: 24px;
     font-weight: bold;
     padding: 50px 20px;
     margin-top: 80px;
 }
+
