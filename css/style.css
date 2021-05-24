@@ -90,12 +90,13 @@ main img {
     display: grid;
     height: 1800px;
     width: 100%;
-    grid-template-columns: 1fr 1.5fr 312px;
-    grid-template-rows: 10vh 3fr 3fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 10vh 3fr 3fr 312px 1fr;
     grid-template-areas: 
     "he nv nv"
-    "mn se as"
-    "mn se as"
+    "mn mn se"
+    "mn mn se"
+    "as as as"
     "fo fo fo"
     ;
 }
@@ -129,15 +130,15 @@ main img {
 header {
     background: #084a91;
     grid-area: he;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 header a img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75px;
-    height: 75px;
-    top: 150px;
+
+    width: auto;
+    height: 9vh;
 }
 
 nav {
@@ -248,7 +249,7 @@ footer > *{
 
 .content-secondary{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 15px;
     background: rgb(45, 99, 199);
     right: 720px;
@@ -343,6 +344,8 @@ footer li{
 .underline{
     text-decoration: underline;
 }
+
+
 
 footer ul{
     padding-left: 0;
