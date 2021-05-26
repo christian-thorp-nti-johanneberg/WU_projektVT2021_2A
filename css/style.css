@@ -64,10 +64,11 @@ main img {
     height: 1560px;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 3fr 0.5fr;
+    grid-template-rows: 10vh 900px 900px 620px;
     grid-template-areas: 
     "he nv nv"
     "mn mn mn"
+    "at at at"
     "fo fo fo"
     ;
 }
@@ -77,7 +78,7 @@ main img {
     height: 1660px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 3fr 0.5fr;
+    grid-template-rows: 10vh 3fr 620px;
     grid-template-areas: 
     "he nv nv"
     "mn mn mn"
@@ -91,7 +92,7 @@ main img {
     height: 1800px;
     width: 100%;
     grid-template-columns: 1fr 1.5fr 1fr;
-    grid-template-rows: 10vh 3fr 3fr 312px 1fr;
+    grid-template-rows: 10vh 3fr 3fr 312px 620px;
     grid-template-areas: 
     "he nv nv"
     "mn mn se"
@@ -106,7 +107,7 @@ main img {
     height: 1790px;
     width: 100%;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 2fr 0.5fr;
+    grid-template-rows: 10vh 2fr 620px;
     grid-template-areas: 
     "he nv nv"
     "at at at"
@@ -119,7 +120,7 @@ main img {
     height: 1300px;
     width: 100%;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 10vh 3fr 1fr;
+    grid-template-rows: 10vh 3fr 620px;
     grid-template-areas: 
     "he nv nv"
     "se se se"
@@ -136,9 +137,9 @@ header {
 }
 
 header a img{
-
     width: auto;
     height: 9vh;
+    opacity: 0.85;
 }
 
 nav {
@@ -162,7 +163,6 @@ aside {
 
 
 article { 
-    background: rgba(0, 191, 255, 0.226);
     grid-area: at;
 }
 
@@ -279,6 +279,7 @@ footer li{
 }
 
 .at-wrapper{
+    background: rgba(0, 191, 255, 0.226);
     display: grid;
     margin: 50px 100px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -331,7 +332,7 @@ footer li{
 }
 
 .footer-right li h2{
-    font-weight: 525;
+    font-weight: 550;
     padding-left: 0;
 }
 
@@ -456,6 +457,7 @@ footer ul{
     
 
     .livestatus{
+        display: flex;
         width: 128px;
         height: 64px;
     }
@@ -479,8 +481,8 @@ footer ul{
         border-style: solid;
         width: 212px;
         height: 500px;
-        grid-template-columns: 106px;
-        grid-template-rows: 212px 1fr 1fr 1fr;
+        grid-template-columns: 212px 1fr 1fr 1fr;
+        grid-template-rows: 106px;
         grid-template-areas: 
         "lv"
         "g1"
@@ -619,8 +621,8 @@ footer ul{
 .div-splitter{
     display: grid;
     border-style: solid;
-    margin: 2.5em 50px;
-    width: 1241px;
+    margin: 3em 50px;
+    width: auto;
     height: 106px;
     grid-template-columns: 212px 1fr 1fr 1fr;
     grid-template-rows: 106px;
@@ -633,8 +635,6 @@ footer ul{
 .livestatus{
     display: flex;
     font-size: 22px;
-    width: 212px;
-    height: 106px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -674,25 +674,50 @@ footer ul{
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 2fr 1fr 1fr;
     grid-template-areas: 
-    "lv gm"
+    "lv lv"
     "mn mn"
     "st st"
     ;
 
 }
-
-.coach-comment{
-    padding: 12px 25px;
-    border-style: dotted;
+.content-news{    
+    background-color: rgba(0, 0, 0, 0.65);
+    color: snow;
+    border: 3px solid;
+    position: relative;
+    width: auto;
+    padding: 20px;
+    align-items: center;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 20px;
 }
 
-.coach-comment:hover{
-    background-color:rgba(14, 155, 61, 0.849);
-    color:  rgb(13, 29, 34);
+.content-news a{
+    padding: 12px 5px; 
+    color: snow;
+    border-color: snow;
+}
+
+.content-news img{
+    height: 200px;
+    width: 355px;
+    padding: 5px;
+}
+
+.content-news:hover{
+    text-decoration: underline;
     cursor: pointer;
 }
 
+.content-news h2 {
+    margin-left: -5px;
+}
 
+.art-title{
+    text-align: center;
+    font-size: 52px;
+}
 
 .bordered{
     border-style: solid;
@@ -703,3 +728,8 @@ footer ul{
     margin-top: 80px;
 }
 
+.art-hero ol{
+    display: flex;
+    flex: row wrap;
+    justify-content: center;
+}
