@@ -28,13 +28,6 @@ li {
     list-style: none;
 }
 
-.supporter-info{
-    padding-top: 50px;
-    padding: 10px;
-    margin: 10px;
-    margin-left: 80px;
-}
-
 .supporter-info p{
     font-size: 14px;
 }
@@ -50,8 +43,6 @@ main img {
 
 .applybox {
     color: rgba(255, 255, 255, 0.8);
-    margin: 50px;
-    margin-top: -80px;
 }
 
 .applybox:hover {
@@ -143,6 +134,7 @@ header a img{
 }
 
 nav {
+    z-index: 100;
     background: #084a91;
     grid-area: nv;
     display: flex;
@@ -588,7 +580,12 @@ footer ul{
 }
 
 .burger{
+    position: fixed;
     margin-right: 50px;
+    border: 3px solid;
+    border-radius: 30%;
+    border-color: rgba(172, 168, 165, 0.85);
+    padding: 10px;
 }
 
 .burger:hover{
@@ -668,7 +665,6 @@ footer ul{
 .content-hero{
     display: grid;
     padding: 25px 0;
-    margin: 0 25px;
     width: 100%;
     height: 800px;
     grid-template-columns: 4fr 1fr;
@@ -685,11 +681,12 @@ footer ul{
     color: snow;
     border: 3px solid;
     position: relative;
-    width: auto;
+    width: 484px;
+    height: 328px;
     padding: 20px;
+    margin: 20px;
     align-items: center;
     display: inline-block;
-    margin: 20px;
     border-radius: 20px;
 }
 
@@ -698,11 +695,15 @@ footer ul{
     color: snow;
     border-color: snow;
 }
+.content-news p{
+    color: rgba(240, 240, 240, 0.7);
+}
 
-.content-news img{
+.art-preview{
+    position: absolute;
+    bottom: 20px;
     height: 200px;
     width: 355px;
-    padding: 5px;
 }
 
 .content-news:hover{
@@ -728,8 +729,7 @@ footer ul{
     margin-top: 80px;
 }
 
-.art-hero ol{
+.art-hero ul{
     display: flex;
-    flex: row wrap;
     justify-content: center;
 }
