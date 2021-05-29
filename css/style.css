@@ -29,7 +29,7 @@ li {
 }
 
 .supporter-info p{
-    font-size: 14px;
+    font-size: 16px;
 }
 
 main{
@@ -37,25 +37,105 @@ main{
 }
 
 main img {
-    width: 500px;
-    height: 400px;
+    width: 35%;
+    height: auto;
 }
 
-.policies{
-    margin-left: 10%;
-    list-style-type: circle;
+.policies li{
+    margin-left: 25px;
+    list-style-type: decimal;
 }
 
-.applybox {
+
+#apply-offer{
+    display: flex;
+    justify-content: center;
+    font-size: 61px;
+}
+
+.applybox{
     color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 33%;
+    margin: auto;
 }
 
 .applybox:hover {
     background-color: rgb(13, 29, 34);
     color: rgba(123, 255, 71, 0.849);
+    text-decoration: underline;
 }
 
-.gridwrapper-index {
+section > .applybox {
+    font-size: 50px;
+}
+
+#img1{
+    grid-area: img1;
+}
+
+#img2{
+    grid-area: img2;
+}
+
+#img3{
+    grid-area: img3;
+}
+
+.main_applywrapper{
+    display: grid;
+    max-height: min-content;
+    margin-bottom: 40px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "des1 img1"
+    "des2 img2"
+    "des3 img3"
+    ;
+}
+
+.main_applywrapper img{
+    width: 500px;
+    height: 333px;
+    padding: 12px;
+    margin: 2px;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+#desc1{
+    grid-area: des1;
+}
+
+#desc2{
+    grid-area: des2;
+}
+
+#desc3{
+    grid-area: des3;
+}
+
+.main_applywrapper > div {
+    margin: 10px;
+}
+
+.description{
+    border-style: dashed;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.description li{
+    margin-left: 22px;
+    list-style-type: decimal;
+}
+
+.gridwrapper-index{
     display: grid;
     height: 1560px;
     width: 100%;
@@ -73,7 +153,7 @@ main img {
     display: grid;
     height: 1660px;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10vh 3fr 620px;
     grid-template-areas: 
     "he nv nv"
@@ -87,7 +167,7 @@ main img {
     display: grid;
     height: 1800px;
     width: 100%;
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10vh 3fr 3fr 312px 620px;
     grid-template-areas: 
     "he nv nv"
@@ -98,14 +178,24 @@ main img {
     ;
 }
 
+#header-merch{
+    grid-area: hm;
+    margin-bottom: -40px;
+    background-color: rgba(28, 62, 82, 0.5);
+    display: flex;
+    justify-content: center;
+    text-decoration: 3px underline dashed;
+}
+
 .gridwrapper-merch {
     display: grid;
     height: 1790px;
     width: 100%;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 10vh 2fr 620px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 60px 2fr 620px;
     grid-template-areas: 
     "he nv nv"
+    "hm hm hm"
     "at at at"
     "fo fo fo"
     ;
@@ -115,7 +205,7 @@ main img {
     display: grid;
     height: 1300px;
     width: 100%;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10vh 3fr 620px;
     grid-template-areas: 
     "he nv nv"
@@ -247,18 +337,19 @@ footer > *{
 .content-secondary{
     display: flex;
     flex-direction: row;
-    margin-left: 15px;
     background: rgb(45, 99, 199);
     right: 720px;
     align-items: center;
     justify-content: space-around;
     text-align: center;
     font-weight: bold;
+
 }
 
 .content-secondary img{
     width: 220px;
     height: 220px;
+    border-radius: 20%;
 }
 
 
@@ -268,6 +359,12 @@ footer > *{
 
 footer li{
     line-height: 2em;
+}
+
+div.footer-left > img{
+    border: 2px solid black;
+    border-radius: 10%;
+    background-color: rgba(238, 238, 238, 0.63);
 }
 
 .socials a{
@@ -291,11 +388,16 @@ footer li{
 .merch-product img{
     width: 200px;
     height: 200px;
+    border: solid black;
+    padding: 10px;
+    background-color: rgba(136, 136, 136, 0.692);
+    border-radius: 15%;
+    margin-top: 10px;
 }
 
 .merch-product{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
@@ -341,9 +443,20 @@ footer li{
 
 .underline{
     text-decoration: underline;
+    
 }
 
+#section-split > div.content-secondary-about > p:nth-child(8) > span > a:nth-child(1){
+    color: darkslategray;
+}
 
+#section-split > div.content-secondary-about > p:nth-child(8) > span > a:nth-child(1):hover{
+    background-color: rgba(200, 200, 200, 0.6);
+}
+
+#section-split > div.content-secondary-about > p:nth-child(8) > span > a:nth-child(1):visited{
+    color: rgb(255, 238, 0);    
+}
 
 footer ul{
     padding-left: 0;
@@ -410,12 +523,18 @@ footer ul{
         height: 1780px;
         width: 100%;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: 10vh 3fr 0.5fr;
+        grid-template-rows: 10vh 40px 3fr 0.5fr;
         grid-template-areas: 
         "he nv"
+        "hm hm"
         "at at"
         "fo fo"
         ;
+    }
+
+    #header-merch .art-title{
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .gridwrapper-index {
@@ -423,10 +542,11 @@ footer ul{
         height: 1780px;
         width: 100%;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: 10vh 3fr 0.5fr;
+        grid-template-rows: 10vh 1fr 3fr 0.5fr;
         grid-template-areas: 
         "he nv"
         "mn mn"
+        "at at"
         "fo fo"
         ;
     }
@@ -586,7 +706,7 @@ footer ul{
 
 .burger{
     position: fixed;
-    margin-right: 50px;
+    right: 4px;
     top: 4px;
     border: 3px solid;
     border-radius: 30%;
@@ -725,6 +845,7 @@ footer ul{
 .art-title{
     text-align: center;
     font-size: 52px;
+    z-index: 2;
 }
 
 .bordered{
