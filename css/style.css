@@ -59,6 +59,7 @@ main img {
     justify-content: center;
     text-align: center;
     font-size: 61px;
+    grid-area: ao;
 }
 
 .applybox{
@@ -79,7 +80,7 @@ main img {
 }
 
 section > .applybox {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #img1{
@@ -133,6 +134,16 @@ section > .applybox {
     margin: 10px;
 }
 
+#apply-here{
+    text-align: center;
+    font-size: 50px;
+}
+
+#apply-sec{
+    background-color: rgba(51, 51, 139, 0.596);
+    padding: 80px;
+}
+
 .description{
     border-style: dashed;
     font-size: 20px;
@@ -144,12 +155,16 @@ section > .applybox {
     list-style-type: decimal;
 }
 
+.description > h2{
+    font-size: 36px;
+}
+
 .gridwrapper-index{
     display: grid;
-    height: 1560px;
+    height: fit-content;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 400px 900px 620px;
+    grid-template-rows: 10vh min-content min-content 620px;
     grid-template-areas: 
     "he nv nv"
     "mn mn mn"
@@ -160,12 +175,13 @@ section > .applybox {
 
 .gridwrapper-apply {
     display: grid;
-    height: 1660px;
+    height: fit-content;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10vh 3fr 620px;
+    grid-template-rows: 10vh min-content 1fr 0.25fr 620px;
     grid-template-areas: 
     "he nv nv"
+    "ao ao ao"
     "mn mn mn"
     "se se se"
     "fo fo fo"
@@ -461,7 +477,7 @@ div.footer-left > img{
 }
 
 #section-split > div.content-secondary-about > p:nth-child(8) > span > a:nth-child(1){
-    color: darkslategray;
+    color: springgreen;
 }
 
 #section-split > div.content-secondary-about > p:nth-child(8) > span > a:nth-child(1):hover{
@@ -478,7 +494,6 @@ footer ul{
 
 .footer-right{
     flex: 1 0;
-    flex: row wrap;
 }
 
 .footer-right > *{
@@ -488,12 +503,6 @@ footer ul{
 .footer-left{
     flex: 1 0px;
 }
-
-
-
-
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -530,6 +539,11 @@ footer ul{
         "as as"
         "fo fo"
         ;
+    }
+
+    .supporter-info img{
+        width: 50vw;
+        height: 33vw;
     }
 
     .gridwrapper-merch {
@@ -570,9 +584,10 @@ footer ul{
         height: fit-content;
         width: 100%;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: 10vh min-content min-content 2fr;
+        grid-template-rows: 10vh min-content min-content min-content 2fr;
         grid-template-areas: 
         "he nv"
+        "ao ao"
         "mn mn"
         "se se"
         "fo fo"
@@ -591,16 +606,13 @@ footer ul{
         font-size: 12px;
     }
     
-
     .livestatus{
-        display: flex;
-        width: 128px;
-        height: 64px;
+        font-size: 14px;
     }
 
     .gridwrapper-about {
         display: grid;
-        height: 1300px;
+        height: fit-content;
         width: 100%;
         grid-template-columns: 1fr 3fr;
         grid-template-rows: 10vh 3fr 1fr;
@@ -628,13 +640,14 @@ footer ul{
     }
 
     .games{
-        display: block;
+        display: inline-block;
+
     }
 
     #section-split{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1.5 3fr;
+        grid-template-rows: 1.5fr 3fr;
         grid-template-areas: 
         "cp"
         "cs"
@@ -677,6 +690,10 @@ footer ul{
     .content-secondary img{
         width: 150px;
         height: 150px;
+    }
+
+    .content-secondary-about{
+        margin-top: -5px;
     }
 
     .content-secondary-about img{
@@ -766,9 +783,9 @@ footer ul{
     border-style: solid;
     margin: 3em 50px;
     width: auto;
-    height: 106px;
-    grid-template-columns: 212px 1fr 1fr 1fr;
-    grid-template-rows: 106px;
+    height: 150px;
+    grid-template-columns: 20vw 1fr 1fr 1fr;
+    grid-template-rows: 150px;
     grid-template-areas: 
     "lv g1 g2 g3"
     ;
@@ -777,7 +794,7 @@ footer ul{
 
 .livestatus{
     display: flex;
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -793,6 +810,7 @@ footer ul{
     align-items: center;
     justify-content: center;
     border-right-style: dashed;
+    padding: 30px;
 }
 
 #g1{
@@ -812,13 +830,12 @@ footer ul{
     display: grid;
     padding: 25px 0;
     width: 100%;
-    height: 800px;
+    height: 400px;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas: 
     "lv lv"
     "mn mn"
-    "st st"
     ;
 
 }
@@ -832,7 +849,6 @@ footer ul{
     padding: 20px;
     margin: 20px;
     align-items: center;
-    display: inline-block;
     border-radius: 20px;
 }
 
