@@ -19,13 +19,21 @@ a {
     color: black;
 }
 
-
-ul {
+li {
     list-style: none;
 }
 
-li {
-    list-style: none;
+.supporter-info{
+    margin: 10px 20px;
+}
+
+.supporter-info img{
+    width: 30vw;
+    height: 17vw;
+    border: 3px solid snow;
+    padding: 5px;
+    border-radius: 10%;
+    margin: 20px 0;
 }
 
 .supporter-info p{
@@ -46,10 +54,10 @@ main img {
     list-style-type: decimal;
 }
 
-
 #apply-offer{
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 61px;
 }
 
@@ -61,6 +69,7 @@ main img {
     width: 50%;
     height: 33%;
     margin: auto;
+    text-align: center;
 }
 
 .applybox:hover {
@@ -87,7 +96,7 @@ section > .applybox {
 
 .main_applywrapper{
     display: grid;
-    max-height: min-content;
+    height: fit-content;
     margin-bottom: 40px;
     width: 100%;
     grid-template-columns: 1fr 1fr;
@@ -100,10 +109,10 @@ section > .applybox {
 }
 
 .main_applywrapper img{
-    width: 500px;
-    height: 333px;
+    width: 40vw;
+    height: 30vw;
     padding: 12px;
-    margin: 2px;
+    margin: auto;
     border-style: solid;
     border-radius: 10%;
 }
@@ -165,7 +174,7 @@ section > .applybox {
 
 .gridwrapper-supporter {
     display: grid;
-    height: 1800px;
+    height: fit-content;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 10vh 3fr 3fr 312px 620px;
@@ -184,7 +193,7 @@ section > .applybox {
     background-color: rgba(28, 62, 82, 0.5);
     display: flex;
     justify-content: center;
-    text-decoration: 3px underline dashed;
+    text-decoration: 3px underline;
 }
 
 .gridwrapper-merch {
@@ -316,6 +325,10 @@ footer > *{
     margin-top: 12px;
 }
 
+.supporter-info > h3{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
 
 
 .content-secondary-about{
@@ -323,11 +336,12 @@ footer > *{
     grid-area: cs;
 }
 
-.content-secondary-about img {
+.content-secondary-about img{
+    display: block;
     margin: 30px 1em;
-    padding-left: -1em;
-    width: 500px;
-    height: 281px;
+    margin-left: 0;
+    width: 25vw;
+    height: 14vw;
 }
 
 .content-secondary-about > p{
@@ -553,10 +567,10 @@ footer ul{
 
     .gridwrapper-apply {
         display: grid;
-        height: 1660px;
+        height: fit-content;
         width: 100%;
         grid-template-columns: 2fr 2fr;
-        grid-template-rows: 10vh 900px 250px 2fr;
+        grid-template-rows: 10vh min-content min-content 2fr;
         grid-template-areas: 
         "he nv"
         "mn mn"
@@ -565,11 +579,16 @@ footer ul{
         ;
     }
 
-    .gridwrapper-apply main > img {
+    #apply-offer{
+        font-size: 32px;
+    }
 
-        width: 192px;
-        height: 192px;
+    section > .applybox{
+        font-size: 24px;
+    }
 
+    .description{
+        font-size: 12px;
     }
     
 
@@ -831,6 +850,7 @@ footer ul{
     bottom: 20px;
     height: 200px;
     width: 355px;
+    padding: 20px 0;
 }
 
 .content-news:hover{
